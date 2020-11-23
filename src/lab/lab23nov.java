@@ -40,7 +40,6 @@ public class lab23nov {
 //		System.out.println(trySub);
 
 		question("Lab4");
-		// Lab4
 		int score = 70;
 		boolean isHandsome = true;
 		lab4(score, isHandsome);

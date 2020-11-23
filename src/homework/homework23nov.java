@@ -86,10 +86,12 @@ public class homework23nov {
 		
 		lineSeperator("5.8");
 		draw25(n);
-//		lineSeperator("Keyboard");
-//		Scanner scan = new java.util.Scanner(System.in);
-//		System.out.print("Please enter number: ");
-//		keyboard(scan.nextInt());
+		
+		
+		lineSeperator("Keyboard");
+		Scanner scan = new java.util.Scanner(System.in);
+		System.out.print("Please enter number: ");
+		keyboard(scan.nextInt());
 	}
 
 	public static void draw1(int n) {

@@ -75,6 +75,17 @@ public class homework23nov {
 		lineSeperator("5.4");
 		draw21(n);
 
+		lineSeperator("5.5");
+		draw22(n);
+		
+		lineSeperator("5.6");
+		draw23(n);
+		
+		lineSeperator("5.7");
+		draw24(n);
+		
+		lineSeperator("5.8");
+		draw25(n);
 //		lineSeperator("Keyboard");
 //		Scanner scan = new java.util.Scanner(System.in);
 //		System.out.print("Please enter number: ");
@@ -330,6 +341,72 @@ public class homework23nov {
 		}
 
 	}
+
+	public static void draw22(int n) {
+		for (int i = 1; i <= n; i++) {
+			System.out.print("_".repeat(n - i));
+			System.out.print("*".repeat(i * 2 - 1));
+			System.out.print("_".repeat(n - i));
+			System.out.println();
+		}
+	}
+	
+	public static void draw23(int n) {
+		for (int i = 1; i <= n; i++) {
+			System.out.print("_".repeat(i-1));
+			System.out.print("*".repeat((n*2)-1-((i-1)*2)));
+			System.out.print("_".repeat(i-1));
+			System.out.println();
+		}
+	}
+	
+	public static void draw24(int n) {
+		boolean isN = false;
+		for(int i = 1 ; i != 0;) {
+			printUnderScore(n-i);
+			System.out.print("*".repeat((2*i)-1));
+			printUnderScore(n-i);
+			if (i == n) {
+				isN = true;
+			}
+			
+			if (isN) {
+				i--;
+			} else {
+				i++;
+			}
+			System.out.println();
+		}
+	}
+	
+	public static void draw25(int n) {
+		boolean isN = false;
+		int count = 1;
+		for(int i = 1 ; i != 0;) {
+			printUnderScore(n-i);
+			for(int j = 1 ; j <= (2*i)-1; j++) {
+				System.out.print(count);
+				count++;
+			}
+			printUnderScore(n-i);
+			if (i == n) {
+				isN = true;
+			}
+			
+			if (isN) {
+				i--;
+			} else {
+				i++;
+			}
+			System.out.println();
+		}
+	}
+	
+	public static void printUnderScore(int i) {
+		System.out.print("_".repeat(i));
+	}
+	
+	
 
 	public static void lineSeperator(String q) {
 		System.out.println();

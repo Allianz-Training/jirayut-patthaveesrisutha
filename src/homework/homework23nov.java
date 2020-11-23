@@ -197,7 +197,7 @@ public class homework23nov {
 		for (int i = 1; i <= n; i++) {
 			for (int j = 1; j <= n; j++) {
 				if (i == j) {
-					System.out.print("_");
+					System.out.print("-");
 				} else {
 					System.out.print("*");
 				}
@@ -210,7 +210,7 @@ public class homework23nov {
 		for (int i = 1; i <= n; i++) {
 			for (int j = 1; j <= n; j++) {
 				if (j == n - (i - 1)) {
-					System.out.print("_");
+					System.out.print("-");
 				} else {
 					System.out.print("*");
 				}
@@ -223,7 +223,7 @@ public class homework23nov {
 		for (int i = 1; i <= n; i++) {
 			for (int j = 1; j <= n; j++) {
 				if (j > i) {
-					System.out.print("_");
+					System.out.print("-");
 				} else {
 					System.out.print("*");
 				}
@@ -236,7 +236,7 @@ public class homework23nov {
 		for (int i = 1; i <= n; i++) {
 			for (int j = 1; j <= n; j++) {
 				if (j > n - i + 1) {
-					System.out.print("_");
+					System.out.print("-");
 				} else {
 					System.out.print("*");
 				}
@@ -248,7 +248,7 @@ public class homework23nov {
 	public static void draw16(int n) {
 		boolean isN = false;
 		for (int i = 1; i != 0;) {
-			System.out.println("*".repeat(i) + "_".repeat(n - i));
+			System.out.println("*".repeat(i) + "-".repeat(n - i));
 			if (i == n) {
 				isN = true;
 			}
@@ -263,7 +263,7 @@ public class homework23nov {
 	public static void draw17(int n) {
 		boolean isN = false;
 		for (int i = 1; i != 0;) {
-			System.out.println(String.valueOf(i).repeat(i) + "_".repeat(n - i));
+			System.out.println(String.valueOf(i).repeat(i) + "-".repeat(n - i));
 			if (i == n) {
 				isN = true;
 			}
@@ -285,7 +285,7 @@ public class homework23nov {
 		for (int i = 1; i <= n; i++) {
 			for (int j = 1; j <= n; j++) {
 				if (j <= n - i) {
-					System.out.print("_");
+					System.out.print("-");
 				} else {
 					System.out.print("*");
 				}
@@ -300,7 +300,7 @@ public class homework23nov {
 				if (j > i - 1) {
 					System.out.print("*");
 				} else {
-					System.out.print("_");
+					System.out.print("-");
 				}
 			}
 			System.out.println();
@@ -310,7 +310,7 @@ public class homework23nov {
 	public static void draw20(int n) {
 		boolean isN = false;
 		for (int i = 1; i != 0;) {
-			System.out.println("_".repeat(n - i) + "*".repeat(i));
+			System.out.println("-".repeat(n - i) + "*".repeat(i));
 			if (i == n) {
 				isN = true;
 			}
@@ -326,7 +326,7 @@ public class homework23nov {
 		boolean isN = false;
 		int i = 1;
 		for (int j = 1; j != 0;) {
-			System.out.print("_".repeat(n - j));
+			System.out.print("-".repeat(n - j));
 			for (int k = 1; k <= j; k++) {
 				System.out.print(i);
 				i++;
@@ -346,18 +346,18 @@ public class homework23nov {
 
 	public static void draw22(int n) {
 		for (int i = 1; i <= n; i++) {
-			System.out.print("_".repeat(n - i));
+			System.out.print("-".repeat(n - i));
 			System.out.print("*".repeat(i * 2 - 1));
-			System.out.print("_".repeat(n - i));
+			System.out.print("-".repeat(n - i));
 			System.out.println();
 		}
 	}
 	
 	public static void draw23(int n) {
 		for (int i = 1; i <= n; i++) {
-			System.out.print("_".repeat(i-1));
+			System.out.print("-".repeat(i-1));
 			System.out.print("*".repeat((n*2)-1-((i-1)*2)));
-			System.out.print("_".repeat(i-1));
+			System.out.print("-".repeat(i-1));
 			System.out.println();
 		}
 	}
@@ -365,9 +365,9 @@ public class homework23nov {
 	public static void draw24(int n) {
 		boolean isN = false;
 		for(int i = 1 ; i != 0;) {
-			printUnderScore(n-i);
+			printLine(n-i);
 			System.out.print("*".repeat((2*i)-1));
-			printUnderScore(n-i);
+			printLine(n-i);
 			if (i == n) {
 				isN = true;
 			}
@@ -385,12 +385,12 @@ public class homework23nov {
 		boolean isN = false;
 		int count = 1;
 		for(int i = 1 ; i != 0;) {
-			printUnderScore(n-i);
+			printLine(n-i);
 			for(int j = 1 ; j <= (2*i)-1; j++) {
 				System.out.print(count);
 				count++;
 			}
-			printUnderScore(n-i);
+			printLine(n-i);
 			if (i == n) {
 				isN = true;
 			}
@@ -404,8 +404,8 @@ public class homework23nov {
 		}
 	}
 	
-	public static void printUnderScore(int i) {
-		System.out.print("_".repeat(i));
+	public static void printLine(int i) {
+		System.out.print("-".repeat(i));
 	}
 	
 	

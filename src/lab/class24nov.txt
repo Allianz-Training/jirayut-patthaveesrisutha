@@ -1,0 +1,12 @@
+Class สินค้าแนะนำประจำวัน Card
+
+Properties
+ - Image
+ - Item name
+ - Price
+ - Banner
+ - URL
+
+Action
+ - Hover: on a card will change border color
+ - Click: Redirect to item detail page

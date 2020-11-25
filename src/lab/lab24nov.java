@@ -15,46 +15,9 @@ public class lab24nov {
 		question("Lab 13");
 		lab13();
 		
-		String[] strs = {"flower","flower","flower","flower"};
-		System.out.println(longestCommonPrefix(strs));
 
 	}
 	
-	public static String longestCommonPrefix(String[] strs) {
-	       if(strs.length == 1){
-	           return strs[0];
-	       } else{
-	            boolean pass = false;
-	        String checkString = "";
-	        for(int i = strs[0].length() ; i > 0 ; i--) {
-			    if(strs[0].length() < 1){
-	                break;
-	            }         
-	            checkString = strs[0].substring(0,i);
-
-				for (int j = 1 ; j < strs.length ; j++) {
-					if(i > strs[j].length()) {
-	                    pass = false;
-						break;
-					}else {
-						if(!checkString.equals(strs[j].substring(0,i))) {
-	                        pass = false;
-							break;
-						}else{
-	                        pass = true;
-	                    }
-							
-					}
-				}
-	            if(pass){
-	                return checkString;
-	            }
-	            
-			}
-	        return "";
-	       }
-
-	    }
 
 
 	public static void labString() {

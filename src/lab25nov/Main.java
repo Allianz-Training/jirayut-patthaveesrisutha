@@ -42,5 +42,15 @@ public class Main {
 		pg.tellWPM();
 
 		EmployeeSpecial thor = new EmployeeSpecial("Thor", "lastname", "God", 1200000, "Thunder");
+//		
+//		Employee[] employees2 = {ceo,em1,pg};
+//		
+//		for (Employee employee : employees2) {
+//			System.out.println(employee);
+//		}
+		
+		Employee pgtEmployee = new CEO("Em", "CEO", "CEO", 444);
+		System.out.println(pgtEmployee.getSalary());
+		
 	}
 }

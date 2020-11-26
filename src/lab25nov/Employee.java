@@ -37,4 +37,10 @@ public class Employee {
 	public static void showHoliday() {
 		System.out.println("Get employee holiday from void method " + holiday);
 	}
+
+	@Override
+	public String toString() {
+		return "Employee [firstname=" + firstname + ", lastname=" + lastname + ", position=" + position + ", salary="
+				+ salary + "]";
+	}
 }

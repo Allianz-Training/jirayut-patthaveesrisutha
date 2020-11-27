@@ -11,7 +11,7 @@ public class PageProductList extends Page {
 		boolean isAdd = false;
 
 		System.out.println("=====Product List=====");
-		for (Product p : state.products) {
+		for (Product p : state.getProducts()) {
 			System.out.println(p);
 		}
 		System.out.println();
@@ -25,20 +25,20 @@ public class PageProductList extends Page {
 		switch (inpuString.toLowerCase()) {
 
 		case "b": {
-			state.stack.pop().show();
+			state.getStack().pop().show();
 			break;
 		}
 		case "sc": {
 			PageShoppingCart page = new PageShoppingCart();
-			state.stack.push(this);
+			state.getStack().push(this);
 			page.show();
 			break;
 		}
 		default:
-			for (Product p : state.products) {
+			for (Product p : state.getProducts()) {
 				if (p.getId().equals(inpuString)) {
 					System.out.println("Added " + p.getTitle() + " to cart");
-					state.cart.addProduct(p);
+					state.getCart().addProduct(p);
 					isAdd = true;
 					break;
 				}

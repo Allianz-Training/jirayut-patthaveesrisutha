@@ -45,7 +45,7 @@ public class ShoppingCart {
 		while (iterator.hasNext()) {
 			Map.Entry me = (Map.Entry) iterator.next();
 			Product product = (Product) me.getKey();
-			System.out.println("ID: " + product.getId() + ", Title: "+ product.getTitle());
+			System.out.println("ID: " + product.getId() + ", Title: "+ product.getTitle() + ", Price: " + product.getPrice());
 			System.out.println("Amount: " + me.getValue());
 		}
 	}

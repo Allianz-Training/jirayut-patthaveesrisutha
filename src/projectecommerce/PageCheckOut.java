@@ -12,55 +12,63 @@ public class PageCheckOut extends Page {
 
 	SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMdd+HH+mm+ss");
 	Date date = new Date(System.currentTimeMillis());
+	String inpuString;
 
 	@Override
 	public void show() {
 		System.out.println("=====CheckOut=====");
-		System.out.println("Total :" + state.cart.getTotalPrice() + " Baht");
+		state.getCart().showShoppingCartList();
+		System.out.println("==================");
+		System.out.println("Total :" + state.getCart().getTotalPrice() + " Baht");
 		System.out.println();
 		System.out.println("Type CO to confirm for shipping.");
 		System.out.println("Type B to Back");
 		System.out.print("Please Input: ");
 
-		String inpuString = state.scanner.nextLine();
+		inpuString = state.scanner.nextLine();
 
 		switch (inpuString.toLowerCase()) {
 		case "co": {
-			String filename = formatter.format(date) + ".txt";
-			String filepath = "C:\\Users\\jirayutpat\\Desktop\\address\\" + filename;
-
-			System.out.println("================");
-			System.out.println("Please type your address: ");
-
-			try {
-				File myObj = new File(filepath);
-				myObj.createNewFile();
-			} catch (IOException e) {
-				System.out.println("An error occurred.");
-				e.printStackTrace();
-			}
-
-			try {
-				inpuString = state.scanner.nextLine();
-
-				FileWriter myWriter = new FileWriter(filepath);
-				myWriter.write(inpuString);
-				myWriter.close();
-				System.out.println("Thank you! Your order will be shipped ASAP");
-			} catch (IOException e) {
-				System.out.println("An error occurred.");
-				e.printStackTrace();
-			}
+			createTextFile();
 			break;
 		}
 		case "b": {
-			state.stack.pop().show();
+			state.getStack().pop().show();
 			break;
 		}
 		default:
 			System.out.println("Invalid Input!");
 			show();
 			break;
+		}
+	}
+
+	private void createTextFile(){
+		String filename = formatter.format(date) + ".txt";
+//		String filepath = "C:\\Users\\jirayutpat\\Desktop\\address\\" + filename;
+		String filepath = "C:\\Users\\jiray\\Desktop\\address\\"+filename;
+
+		System.out.println("================");
+		System.out.println("Please type your address: ");
+
+		try {
+			File myObj = new File(filepath);
+			myObj.createNewFile();
+		} catch (IOException e) {
+			System.out.println("An error occurred.");
+			e.printStackTrace();
+		}
+
+		try {
+			inpuString = state.scanner.nextLine();
+
+			FileWriter myWriter = new FileWriter(filepath);
+			myWriter.write(inpuString);
+			myWriter.close();
+			System.out.println("Thank you! Your order will be shipped ASAP");
+		} catch (IOException e) {
+			System.out.println("An error occurred.");
+			e.printStackTrace();
 		}
 	}
 

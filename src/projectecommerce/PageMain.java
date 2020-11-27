@@ -19,7 +19,7 @@ public class PageMain extends Page {
 
 		switch (inpuString.toLowerCase()) {
 		case "a": {
-			state.stack.push(this);
+			state.getStack().push(this);
 			PageProductList page = new PageProductList();
 			page.show();
 			break;

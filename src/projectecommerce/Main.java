@@ -9,8 +9,8 @@ public class Main {
 		Product p1 = new ElectronicProduct("01", "TV", 4000);
 		Product p2 = new FoodProduct("02", "test", 50);
 		
-		state.products.add(p1);
-		state.products.add(p2);
+		state.getProducts().add(p1);
+		state.getProducts().add(p2);
 	
 
 		PageMain mainPage = new PageMain();

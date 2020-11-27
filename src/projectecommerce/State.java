@@ -8,11 +8,11 @@ class State {
 	// static variable single_instance of type Singleton
 	private static State single_instance = null;
 
-	// variable of type String
-	public String s;
-	public ShoppingCart cart = new ShoppingCart();
-	public Stack<Page> stack = new Stack<>();
-	public ArrayList<Product> products = new ArrayList<>();
+	private ShoppingCart cart = new ShoppingCart();
+	private Stack<Page> stack = new Stack<>();
+	private ArrayList<Product> products = new ArrayList<>();
+
+	private boolean isAdmin = true;
 	Scanner scanner = new Scanner(System.in);
 	
 
@@ -26,5 +26,17 @@ class State {
 			single_instance = new State();
 
 		return single_instance;
+	}
+
+	public ShoppingCart getCart() {
+		return cart;
+	}
+
+	public Stack<Page> getStack() {
+		return stack;
+	}
+
+	public ArrayList<Product> getProducts() {
+		return products;
 	}
 }

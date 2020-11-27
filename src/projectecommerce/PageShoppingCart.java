@@ -11,7 +11,7 @@ public class PageShoppingCart extends Page {
 	public void show() {
 		boolean isRemove = false;
 		System.out.println("=====Shopping Cart=====");
-		state.cart.showShoppingCartList();
+		state.getCart().showShoppingCartList();
 		System.out.println();
 		System.out.println("Type Product ID to remove from the cart.");
 		System.out.println("Type C to clear cart.");
@@ -23,25 +23,25 @@ public class PageShoppingCart extends Page {
 
 		switch (inpuString.toLowerCase()) {
 		case "b": {
-			state.stack.pop().show();
+			state.getStack().pop().show();
 			break;
 		}
 		case "c":{
-			state.cart.clearCart();
+			state.getCart().clearCart();
 			show();
 			break;
 		}
 		case "co":{
 			PageCheckOut page = new PageCheckOut();
 			page.show();
-			state.stack.push(this);
+			state.getStack().push(this);
 			break;
 		}
 		default:
-			for (Product p : state.cart.getProducts()) {
+			for (Product p : state.getCart().getProducts()) {
 				if (p.getId().equals(inpuString)) {
 					System.out.println("Removed " + p.getTitle() + " from cart");
-					state.cart.removeProduct(p);
+					state.getCart().removeProduct(p);
 					isRemove = true;
 					break;
 				}

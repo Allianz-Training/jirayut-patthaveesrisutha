@@ -1,6 +1,7 @@
 package projectecommerce;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 import java.util.Stack;
 
 class State {
@@ -12,6 +13,8 @@ class State {
 	public ShoppingCart cart = new ShoppingCart();
 	public Stack<Page> stack = new Stack<>();
 	public ArrayList<Product> products = new ArrayList<>();
+	Scanner scanner = new Scanner(System.in);
+	
 
 	// private constructor restricted to this class itself
 	private State() {

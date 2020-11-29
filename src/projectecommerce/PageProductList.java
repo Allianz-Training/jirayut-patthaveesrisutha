@@ -11,7 +11,7 @@ public class PageProductList extends Page {
 		boolean isAdd = false;
 
 		System.out.println("=====Product List=====");
-		for (Product p : state.getProducts()) {
+		for (Product p : state.getpList().getProducts()) {
 			System.out.println(p);
 		}
 		System.out.println();
@@ -20,9 +20,9 @@ public class PageProductList extends Page {
 		System.out.println("Type B to Back");
 		System.out.print("Please Input: ");
 
-		String inpuString = state.scanner.nextLine();
+		String inputString = state.scanner.nextLine();
 
-		switch (inpuString.toLowerCase()) {
+		switch (inputString.toLowerCase()) {
 
 		case "b": {
 			state.getStack().pop().show();
@@ -35,8 +35,8 @@ public class PageProductList extends Page {
 			break;
 		}
 		default:
-			for (Product p : state.getProducts()) {
-				if (p.getId().equals(inpuString)) {
+			for (Product p : state.getpList().getProducts()) {
+				if (p.getId().equals(inputString)) {
 					System.out.println("Added " + p.getTitle() + " to cart");
 					state.getCart().addProduct(p);
 					isAdd = true;

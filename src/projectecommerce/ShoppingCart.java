@@ -1,13 +1,10 @@
 package projectecommerce;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class ShoppingCart {
 
-	HashMap<Product, Integer> cart = new HashMap<>();
+	LinkedHashMap<Product, Integer> cart = new LinkedHashMap<>();
 
 	public void addProduct(Product p) {
 		if (cart.containsKey(p)) {

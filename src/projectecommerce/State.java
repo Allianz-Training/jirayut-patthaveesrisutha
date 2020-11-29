@@ -9,9 +9,8 @@ class State {
 	private static State single_instance = null;
 
 	private ShoppingCart cart = new ShoppingCart();
+	private ProductList pList = new ProductList();
 	private Stack<Page> stack = new Stack<>();
-	private ArrayList<Product> products = new ArrayList<>();
-
 	private boolean isAdmin = true;
 	Scanner scanner = new Scanner(System.in);
 	
@@ -36,7 +35,11 @@ class State {
 		return stack;
 	}
 
-	public ArrayList<Product> getProducts() {
-		return products;
+	public ProductList getpList(){
+		return pList;
+	}
+
+	public boolean isAdmin() {
+		return isAdmin;
 	}
 }

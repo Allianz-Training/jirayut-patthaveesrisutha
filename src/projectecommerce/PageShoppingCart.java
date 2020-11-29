@@ -19,9 +19,9 @@ public class PageShoppingCart extends Page {
 		System.out.println("Type B to Back");
 		System.out.print("Please Input: ");
 
-		String inpuString = state.scanner.nextLine();
+		String inputString = state.scanner.nextLine();
 
-		switch (inpuString.toLowerCase()) {
+		switch (inputString.toLowerCase()) {
 		case "b": {
 			state.getStack().pop().show();
 			break;
@@ -39,7 +39,7 @@ public class PageShoppingCart extends Page {
 		}
 		default:
 			for (Product p : state.getCart().getProducts()) {
-				if (p.getId().equals(inpuString)) {
+				if (p.getId().equals(inputString)) {
 					System.out.println("Removed " + p.getTitle() + " from cart");
 					state.getCart().removeProduct(p);
 					isRemove = true;

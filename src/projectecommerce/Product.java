@@ -1,7 +1,7 @@
 package projectecommerce;
 
-public abstract class Product {
-	private String id;
+public class Product {
+	private final String id;
 	private String title;
 	private int price;
 	

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+    // let n = prompt('Input n')
+    let n = 4
+    console.log('1==================')
+    draw(n)
+    console.log('2==================')
+    draw2(n)
+    console.log('3==================')
+    draw3(n)
+    console.log('4==================')
+    draw4(n)
+    console.log('5==================')
+    draw5(n)
+    console.log('6==================')
+    draw6(n)
+    console.log('7==================')
+    draw7(n)
+    console.log('8==================')
+    draw8(n)
+    console.log('9==================')
+    draw9(n)
+    console.log('10==================')
+    draw10(n)
+    console.log('11==================')
+    draw11(n)
+    console.log('12==================')
+    draw12(n)
+    console.log('13==================')
+    draw13(n)
+    console.log('14==================')
+    draw14(n)
+    console.log('15==================')
+    draw15(n)
+    console.log('17==================')
+    draw17(n)
+    console.log('18==================')
+    draw18(n)
+    console.log('19==================')
+    draw19(n)  
+    console.log('20==================')
+    draw20(n) 
+    console.log('21==================')
+    draw21(n) 
+    console.log('22==================')
+    draw22(n)  
+    console.log('23==================')
+    draw23(n)
+    console.log('24==================')
+    draw24(n)    
+    function draw(n){
+        let star =''
+        for(var i = 0 ; i < n ; i++){
+            star += '*'
+        }
+        console.log(star)
+    }
+
+    function draw2(n){
+        for(var i = 0 ; i < n ; i++){
+            let star =''
+            for(var j = 0 ; j < n ; j++){
+                star += '*'
+            }
+            console.log(star)
+        }
+    }
+
+    function draw3(n){
+        for(var i = 0 ; i < n ; i++){
+            let out = ''
+            for(var j = 0 ; j < n ; j++){
+                out += j+1
+            }
+            console.log(out)
+        }
+    }
+
+    function draw4(n){
+        for(var i = 0 ; i < n ; i++){
+            let out = ''
+            for(var j = 0 ; j < n ; j++){
+                out += i+1
+            }
+            console.log(out)
+        }
+    }
+
+    function draw5(n){
+        for(var i = 0 ; i < n ; i++){
+            let out = ''
+            for(var j = 0 ; j < n ; j++){
+                out += n-i
+            }
+            console.log(out)
+        }
+    }
+    function draw6(n){
+        for(var i = 1 ; i <= n*n; ){
+            let out =''
+            for(var j = 0 ; j < n ; j++){
+                out+=i++
+            }
+            console.log(out)
+        }
+    }
+    function draw7(n){
+        for(var i = n*n ; i >= 1; ){
+            let out =''
+            for(var j = 0 ; j < n ; j++){
+                out+=i--
+            }
+            console.log(out)
+        }
+    }
+
+    function draw8(n){
+        for(var i = 0 ; i < n ; i++){
+            console.log(i*2)
+        }
+    }
+
+    function draw9(n){
+        for(var i = 0 ; i < n ; i++){
+            console.log((i+1)*2)
+        }
+    }
+
+    function draw10(n){
+        for(var i = 1 ; i <= n ; i++){
+            let out = ''
+            for(var j = 1 ; j <= n ; j++){
+                out += i*j
+            }
+            console.log(out)
+        }
+    }
+
+    function draw11(n){
+        for(var i = 1 ; i <= n ; i++){
+            let out = ''
+            for(var j = 1 ; j <= n ; j++){
+                out += (i==j) ? '-' : '*'
+            }
+            console.log(out)
+        }
+    }
+
+    function draw12(n){
+        for(var i = 1 ; i <= n ; i++){
+            let out = ''
+            for(var j = 1 ; j <= n ; j++){
+                out += (j==n-(i-1)) ? '-' : '*'
+            }
+            console.log(out)
+        }
+    }
+
+    function draw13(n){
+        for(var i = 1 ; i <= n ; i++){
+            let out = ''
+            for(var j = 1 ; j <= n ; j++){
+                out += (j <= i) ? '*' : '-'
+            }
+            console.log(out)
+        }
+    }
+
+    function draw14(n){
+        for(var i = 1 ; i <= n ; i++){
+            let out = ''
+            for(var j = 1 ; j <= n ; j++){
+                out += (j <= n-(i-1)) ? '*' : '-'
+            }
+            console.log(out)
+        }
+    }
+
+    function draw15(n){
+        var isN = false
+        for(var i = 1 ;  i > 0;){
+            let out = ''
+            for(var j = 0 ; j < n ; j++){
+                out += (j < i) ? '*':'-' 
+            }
+            console.log(out)
+            if(isN) {
+                i--
+            }else{
+                i++
+                isN = (i == n) ? true : false
+            }
+        }
+    }
+
+    function draw17(n){
+        for(var i = 1 ; i <= n ; i++){
+            let out = ''
+            for(var j = 1 ; j <= n ; j++){
+                out += (j > n-i) ? '*' : '-'
+            }
+            console.log(out)
+        }
+    }
+
+    function draw18(n){
+        for(var i = 1 ; i <= n ; i++){
+            let out = ''
+            for(var j = 1 ; j <= n ; j++){
+                out += (j >= i) ? '*' : '-'
+            }
+            console.log(out)
+        }
+    }
+
+    function draw19(n){
+        var isN = false
+        for(var i = 1 ;  i > 0;){
+            let out = ''
+            for(var j = 0 ; j < n ; j++){
+                out += (j >= n-i) ? '*':'-' 
+            }
+            console.log(out)
+            if(isN) {
+                i--
+            }else{
+                i++
+                isN = (i == n) ? true : false
+            }
+        }
+    }
+
+    function draw20(n){
+        var isN = false
+        var count = 1
+        for(var i = 1 ;  i > 0;){
+            let out = ''
+            for(var j = 0 ; j < n ; j++){
+                out += (j >= n-i) ? count++:'-' 
+            }
+            console.log(out)
+            if(isN) {
+                i--
+            }else{
+                i++
+                isN = (i == n) ? true : false
+            }
+        }
+    }
+
+    function draw21(n){
+        for(var i = 1 ; i <= n ; i++ ){
+            let out = ''
+            for (var j = 0 ; j < (n*2)-1;j++){
+                out += (j < (n-i) || j >= n+i-1) ? '-':'*'
+            }
+            console.log(out)
+        }
+    }
+
+    function draw22(n){
+        for(var i = 1 ; i <= n ; i++ ){
+            let out = ''
+            for (var j = 0 ; j < (n*2)-1;j++){
+                out += (j < (i-1) || j >= (n*2)-i) ? '-':'*'
+            }
+            console.log(out)
+        }
+    }
+
+    function draw23(n){
+        var isN = false
+        for(var i = 1 ; i > 0 ; ){
+            let out = ''
+            for (var j = 0 ; j < (n*2)-1;j++){
+                out += (j < (n-i) || j >= n+i-1) ? '-':'*'
+            }
+            console.log(out)
+            if(isN) {
+                i--
+            }else{
+                i++
+                isN = (i == n) ? true : false
+            }
+        } 
+    }
+
+    function draw24(n){
+        var isN = false
+        var count = 1
+        for(var i = 1 ; i > 0 ; ){
+            let out = ''
+            for (var j = 0 ; j < (n*2)-1;j++){
+                out += (j < (n-i) || j >= n+i-1) ? '-':count++
+            }
+            console.log(out)
+            if(isN) {
+                i--
+            }else{
+                i++
+                isN = (i == n) ? true : false
+            }
+        } 
+    }
+</script>
+</html>

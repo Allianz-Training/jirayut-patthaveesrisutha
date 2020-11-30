@@ -43,10 +43,10 @@ public class PageCheckOut extends Page {
 		}
 	}
 
-	private void createTextFile(){
-		String filename = formatter.format(date) + ".txt";
+	private void createTextFile() {
+		String filepath = formatter.format(date) + ".txt";
 //		String filepath = "C:\\Users\\jirayutpat\\Desktop\\address\\" + filename;
-		String filepath = "C:\\Users\\jiray\\Desktop\\address\\"+filename;
+//		String filepath = "C:\\Users\\jiray\\Desktop\\address\\" + filename;
 
 		System.out.println("================");
 		System.out.println("Please type your address: ");

@@ -1,10 +1,8 @@
 package projectecommerce;
 
-import java.net.InetSocketAddress;
-
 public class PageProductList extends Page {
 	State state = State.getInstance();
-	
+
 	@Override
 	public void show() {
 
@@ -43,7 +41,7 @@ public class PageProductList extends Page {
 					break;
 				}
 			}
-			if(!isAdd) {
+			if (!isAdd) {
 				System.out.println("Invalid Input!");
 			}
 			show();

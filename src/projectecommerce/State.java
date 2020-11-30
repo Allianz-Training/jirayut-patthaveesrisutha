@@ -1,6 +1,5 @@
 package projectecommerce;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Stack;
 
@@ -13,7 +12,6 @@ class State {
 	private Stack<Page> stack = new Stack<>();
 	private boolean isAdmin = true;
 	Scanner scanner = new Scanner(System.in);
-	
 
 	// private constructor restricted to this class itself
 	private State() {
@@ -35,7 +33,7 @@ class State {
 		return stack;
 	}
 
-	public ProductList getpList(){
+	public ProductList getpList() {
 		return pList;
 	}
 

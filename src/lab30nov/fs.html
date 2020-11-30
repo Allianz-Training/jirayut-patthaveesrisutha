@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2 {
+            color: blueviolet;
+            background-color: chocolate;
+            text-align: center;
+            font-size: 4rem;
+        }
+        body{
+            background-color: cornsilk;
+        }
+    </style>
+</head>
+<body>
+    <input id="in1" type="text" placeholder="Text Color">
+    <input id="in2" type="text" placeholder="background Color">
+    <button onclick="changeColor()">Change Color</button>
+    <h2 style="padding: 1rem;">Yellow Duck is the Best.</h2>
+    <script>
+        function changeColor(){
+            let tcolor = document.querySelector('#in1').value
+            let bcolor = document.querySelector('#in2').value
+            alert(tcolor)
+            alert(bcolor)
+            document.querySelector('h2').style.color = tcolor
+            document.querySelector('h2').style.backgroundColor = bcolor 
+        }
+    </script>
+</body>
+</html>
+ttttfff

@@ -1,8 +1,5 @@
 package projectecommerce;
 
-import java.util.Iterator;
-import java.util.Map;
-
 public class PageShoppingCart extends Page {
 
 	State state = State.getInstance();
@@ -26,12 +23,12 @@ public class PageShoppingCart extends Page {
 			state.getStack().pop().show();
 			break;
 		}
-		case "c":{
+		case "c": {
 			state.getCart().clearCart();
 			show();
 			break;
 		}
-		case "co":{
+		case "co": {
 			PageCheckOut page = new PageCheckOut();
 			page.show();
 			state.getStack().push(this);
@@ -46,7 +43,7 @@ public class PageShoppingCart extends Page {
 					break;
 				}
 			}
-			if(!isRemove) {
+			if (!isRemove) {
 				System.out.println("Invalid Input");
 			}
 			show();

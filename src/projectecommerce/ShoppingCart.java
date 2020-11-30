@@ -1,6 +1,9 @@
 package projectecommerce;
 
-import java.util.*;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Set;
 
 public class ShoppingCart {
 
@@ -21,7 +24,7 @@ public class ShoppingCart {
 			cart.remove(p);
 		}
 	}
-	
+
 	public void clearCart() {
 		cart.clear();
 	}
@@ -36,24 +39,21 @@ public class ShoppingCart {
 		}
 		return total;
 	}
-	
+
 	public void showShoppingCartList() {
 		Iterator iterator = cart.entrySet().iterator();
 		while (iterator.hasNext()) {
 			Map.Entry me = (Map.Entry) iterator.next();
 			Product product = (Product) me.getKey();
-			System.out.println("ID: " + product.getId() + ", Title: "+ product.getTitle() + ", Price: " + product.getPrice());
+			System.out.println(
+					"ID: " + product.getId() + ", Title: " + product.getTitle() + ", Price: " + product.getPrice());
 			System.out.println("Amount: " + me.getValue());
 		}
 	}
-	
+
 	public Set<Product> getProducts() {
 		return cart.keySet();
 	}
-	
-
-	
-	
 
 	@Override
 	public String toString() {

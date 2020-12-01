@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let str = 'time'
+    let longStr = "What I'd like to tell on this topic is:"
+    console.log(ucFirst(str))
+
+    console.log(checkSpam(str))
+
+    console.log(truncate(longStr, 20))
+
+    console.log(extractCurrencyValue('$120',30.5))
+
+    let styles = new Array("Jazz", "Blues")
+
+    styles.push("Rock-n-Roll")
+    styles[1] = "Classics"
+    console.log(styles)
+    // styles.shift()
+    // styles.unshift("Rap","Reggae")
+    styles.splice(0,1,"Rap","Reggae")
+    console.log(styles)
+    function ucFirst(string){
+        return string = string[0].toUpperCase() + string.slice(1)
+    }
+
+    function checkSpam(string){
+        return string.includes("xxx") || string.includes("viagra")
+    }
+
+    function truncate(string, length){
+        string = (string.length > length) ? string.slice(0,length-1) + '...': string
+        return string
+    }
+
+    function extractCurrencyValue(string,rate){
+        return (string[0] == '$') ? string.slice(1) * rate : false
+    }
+</script>
+</html>

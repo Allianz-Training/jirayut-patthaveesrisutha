@@ -1,0 +1,29 @@
+img {
+    height: 40px;
+    width: 171px;
+    margin: 50px;
+}
+
+div {
+    background-image: url(https://www.swiftviews.com/auth-background.d98d7ff313fe2ec07d45.png);
+    height: 30rem;
+    
+}
+
+div > p,h3,button {
+    color: white;
+    margin-left: 200px;
+    margin-right: 200px;
+    font-size: 18px;
+    font-family: sans-serif;
+
+}
+
+div > button {
+    color: rgb(255, 17, 108);
+    padding: 15px 40px 15px 40px;
+    font-size: 20px;
+    border-radius: 5px;
+    border-style: none;
+    box-shadow: 0 1px 5px 1px rgba(50,50,50,.35);
+}

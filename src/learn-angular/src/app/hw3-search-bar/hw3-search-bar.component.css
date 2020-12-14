@@ -1,0 +1,22 @@
+div {
+    background-color: white;
+    margin: 3.5rem 270px 0px 270px;
+    border-radius: 5px;
+    border:1px solid salmon;
+    font-family: sans-serif;
+
+}
+
+
+input {
+    width: 90%;
+    height: 100%;
+    padding: 15px;
+    border: 0px solid white;
+    font-size: 20px;
+    color: gray;
+}
+
+input:focus { 
+    outline: none !important;
+}

@@ -1,0 +1,15 @@
+<h1>Hw2</h1>
+<h2>My Task Today</h2>
+<ul>
+    <li *ngFor="let item of list">
+        <p> {{item}}
+            <button (click)="deleteItem(item)">Delete (Hw4)</button>
+        </p>
+    </li>
+</ul>
+
+<span>
+    <b>Task: </b>
+    <input [(ngModel)]="item">
+    <button (click)="addItem()">Add</button>
+</span>

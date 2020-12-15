@@ -1,0 +1,16 @@
+<div class="box">
+    <h1>todolist</h1>
+    <app-task *ngFor="let t of tasks" [task]="t" (onSelected)="deleteTask($event)" (onDisplay)="display($event)"></app-task>
+
+    <div class="inner-box">
+        <h2>Add Task</h2>
+        <span>name: </span> <input [(ngModel)]="name">
+        <span>description: </span> <input [(ngModel)]="description">
+        <p></p>
+        <button (click)="addTask()">Add</button>
+    </div>
+    <div *ngIf = "selectedTask !== undefined">
+        <h2>{{selectedTask.name}} </h2>
+        <p>{{selectedTask.description}}</p>
+    </div>
+</div>

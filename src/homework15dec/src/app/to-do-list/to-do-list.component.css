@@ -1,0 +1,11 @@
+.box {
+    width: 250px;
+    border: 2px solid black;
+    padding: 50px;
+}
+
+.inner-box {
+    border: 2px solid black;
+    margin-top: 5px;
+    padding: 20px;
+}

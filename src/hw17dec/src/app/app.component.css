@@ -1,0 +1,12 @@
+.header {
+    min-height: 50px;
+    background-color: red;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    min-height:max-content;
+    /* width: 100%; */
+    background-color: salmon;
+}

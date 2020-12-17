@@ -1,0 +1,15 @@
+
+form {
+    background-color: wheat;
+    padding: 20px;
+    margin: -25px 0px 0px 0px ;
+    display: block;
+}
+
+div, button{
+    margin: 0px 100px 0px 50px;
+}
+
+button {
+    margin-top: 20px;
+}

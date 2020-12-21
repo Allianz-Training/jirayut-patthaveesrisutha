@@ -1,1 +1,6 @@
-<p>exchange-rate works!</p>
+<form [formGroup]='form' class="container">
+    <input formControlName="baseAmount"> <input formControlName="baseCur">
+    <div></div>
+    <input disabled value="{{targetAmount}}"> <input formControlName="targetCur">
+    <button (click)="convert()">Convert</button>
+</form>

@@ -13,12 +13,20 @@ export class UserListComponent implements OnInit {
   
   constructor(private httpClient: HttpClient, private fb: FormBuilder) { 
     this.form = this.fb.group({
-      name: '',
-      email:''
+      userId: '',
+      id:'',
+      title:'',
+      body:''
     });
   }
 
   ngOnInit(): void {
+    this.loadUser();
+  }
+
+  loadUser(){
+    
+    this.users = [];
     this.httpClient
     .get('https://jsonplaceholder.typicode.com/posts')
     .subscribe(result => {
@@ -26,4 +34,14 @@ export class UserListComponent implements OnInit {
     });
   }
 
+    addUser(){
+      const newUser = this.form.value;
+      this.httpClient
+      .post('https://jsonplaceholder.typicode.com/posts',newUser)
+      .subscribe(result => {
+        this.form.reset();
+        alert('Add User Success !');
+        this.loadUser();
+      });
+    }
 }
